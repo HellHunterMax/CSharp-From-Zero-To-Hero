@@ -6,8 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Computer\Ms\" />
-    <Folder Include="Computer\Mac\" />
+    <Compile Remove="Computer\Mac\**" />
+    <Compile Remove="Computer\Ms\**" />
+    <EmbeddedResource Remove="Computer\Mac\**" />
+    <EmbeddedResource Remove="Computer\Ms\**" />
+    <None Remove="Computer\Mac\**" />
+    <None Remove="Computer\Ms\**" />
   </ItemGroup>
 
 </Project>
