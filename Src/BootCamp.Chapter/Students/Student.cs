@@ -12,24 +12,24 @@ namespace BootCamp.Chapter.Students
         string Name { get; }
         long IStudent.Id { get { return _Id; } set { _Id = value; } }
 
-        List<ISubject> learntSubjects;
+        List<Subject> learntSubjects;
 
         public Student(string name)
         {
             Name = name;
-            learntSubjects = new List<ISubject>();
+            learntSubjects = new List<Subject>();
         }
 
         public void GetSubjectsLearnt()
         {
             Console.WriteLine($"{Name}:");
-            foreach (ISubject subject in learntSubjects)
+            foreach (Subject subject in learntSubjects)
             {
                 Console.WriteLine(subject.GetMessage());
             }
         }
 
-        public void LearnFrom(ITeacher<ISubject> teacher)
+        public void LearnFrom(ITeacher<Subject> teacher)
         {
             learntSubjects.Add(teacher.ProduceMaterial());
         }

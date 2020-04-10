@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BootCamp.Chapter.SchoolSubjects
 {
-    abstract class Subject : ISubject
+    abstract class Subject
     {
         public string Message;
 

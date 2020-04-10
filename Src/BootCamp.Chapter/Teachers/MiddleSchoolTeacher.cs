@@ -5,18 +5,18 @@ using System.Text;
 
 namespace BootCamp.Chapter.Teachers
 {
-    class MiddleSchoolTeacher : ITeacher<ISubject>
+    class MiddleSchoolTeacher : ITeacher<Subject>
     {
         string Name { get; }
-        private ISubject _Teachings;
+        private Subject _Teachings;
 
-        public MiddleSchoolTeacher(string name, ISubject subject)
+        public MiddleSchoolTeacher(string name, Subject subject)
         {
             Name = name;
             _Teachings = subject;
         }
 
-        public ISubject ProduceMaterial()
+        public Subject ProduceMaterial()
         {
             Console.WriteLine($"{Name}:");
             _Teachings.ProduceMaterial();

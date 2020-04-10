@@ -22,9 +22,9 @@ namespace BootCamp.Chapter
             HighSchoolStudent highSchoolStudent1 = new HighSchoolStudent("Jan");
             UniversityStudent universityStudent1 = new UniversityStudent("Karl");
 
-            ISubject art = new Art();
-            ISubject english = new English();
-            ISubject maths = new Maths();
+            Subject art = new Art();
+            Subject english = new English();
+            Subject maths = new Maths();
 
             MiddleSchoolTeacher middleSchoolTeacher1 = new MiddleSchoolTeacher("Kristof", art);
             HighSchoolTeacher highSchoolTeacher1 = new HighSchoolTeacher("John", english);
@@ -48,7 +48,30 @@ namespace BootCamp.Chapter
             middleSchoolStudent1.GetSubjectsLearnt();
             highSchoolStudent1.GetSubjectsLearnt();
             universityStudent1.GetSubjectsLearnt();
+
+            //TODO Try and get a schools list to work.
+            foreach (object school in schools)
+            {
+                ISchool<IStudent, ITeacher<Subject>> s;
+                
+                if (school.GetType().Name == "MiddleSchool")
+                {
+                    var middleSchool = (MiddleSchool)school;
+                    Console.WriteLine("Found MiddleSchool.");
+                }
+                if (school.GetType().Name == "University")
+                {
+                    //s = (University)school;
+                    Console.WriteLine("Found University.");
+                }
+                if (school.GetType().Name == "HighSchool")
+                {
+                    //s = (HighSchool)school;
+                    Console.WriteLine("Found HighSchool.");
+                }
+                
+            }
         }
-        
+
     }
 }
