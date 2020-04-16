@@ -9,7 +9,7 @@ namespace BootCamp.Chapter
         {
             if (string.IsNullOrWhiteSpace(sentence))
             {
-                throw new ArgumentNullException("The sentence you gave was empty.");
+                throw new ArgumentNullException($"The {nameof(sentence)} you gave was empty.");
             }
 
             return GetMostCommonLetterDic(sentence);
