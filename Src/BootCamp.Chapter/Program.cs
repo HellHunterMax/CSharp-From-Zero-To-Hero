@@ -12,7 +12,7 @@ namespace BootCamp.Chapter
             // REMOVE COMMENT // TO START ANY OF THE DEMO's!
 
             //Tests.ShuffleTest(10);
-            //Tests.SnapFingersTest();
+            Tests.SnapFingersTest();
             //Demos.AnyDemo();
             //Demos.CountDemo();
             //Demos.OrderByDemo();

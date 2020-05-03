@@ -72,7 +72,7 @@ namespace BootCamp.Chapter
 
         public static void SnapFingersTest()
         {
-            int[] i = new int[] { 1, 2, 3, 4 };
+            int[] i = new int[] { 1, 2, 3, 4, 5};
 
             var newi = i.SnapFingers();
 
